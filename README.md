@@ -1,11 +1,11 @@
 # Whack_a_Mole_Game_UsingJavaScript.github.io
  ENJOY THE GAME AND SUPPORT ME GUYS
 
- welcome to whack-a-mole with Mario Background, a fun and intreactive arcade-style game inspired bt the classic Whack-a-Mole concept. This version comes alive with the vibrant world of Mario, including iconic visuals and sounds.
+ welcome to whack-a-mole a fun and intreactive arcade-style game inspired bt the classic Whack-a-Mole concept. including iconic visuals.
 FEATURES
 Dynamic Gameplay: Moles pop up randomly for you to whack!
-Mario Sounds: Classic sound effects for a more immersive experience.
 High Score Tracking: Compete against yourself or friends.
+it is an upadate with new background and new plant.
 ---
 Requirements
 To run the game, ensure you have the following:
