@@ -1,33 +1,117 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    background: url("./mario-bg.jpg");
-    background-size: cover;
-}
-#board{
-    width: 540px;
-    height: 550px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    background: url("./soil.png");
-    background-size: cover;
-    border: 4px solid rgb(0, 0, 0);
-    border-radius: 25px;
-}
-#board div{
-    width: 180px;
-    height: 180px;
-    background-image: url("./pipe.png");
-    background-size: cover;
-}
-#board div img{
-    width: 100px;
-    height: 100px;
+@keyframes grassWave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
 
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
+  @keyframes cloudFloat {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(700px); }
+ }
+  @keyframes holeGlow {
+      0%, 100% { 
+          box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      }
+      50% { 
+          box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      }
+ }
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      background-color: #87CEEB;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+ }
+  .background-elements {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+ }
+  .cloud {
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      background-color: white;
+      border-radius: 100px;
+      opacity: 0.7;
+ }
+  .cloud:nth-child(1) {
+      top: 50px;
+      left: -100px;
+      animation: cloudFloat 30s linear infinite;
+ }
+  .cloud:nth-child(2) {
+      top: 100px;
+      left: -200px;
+      width: 150px;
+      height: 40px;
+      animation: cloudFloat 40s linear infinite;
+      animation-delay: -10s;
+ }
+  #board {
+      width: 540px;
+      height: 540px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #8BC34A;
+      border: 3px solid white;
+      border-radius: 25px;
+      position: relative;
+      overflow: hidden;
+ }
+  .grass-border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: repeating-linear-gradient(
+          45deg,
+          #2E7D32,
+          #2E7D32 10px,
+          #4CAF50 10px,
+          #4CAF50 20px
+      );
+      animation: grassWave 3s ease-in-out infinite;
+ }
+  #board div {
+      width: 180px; 
+      height: 180px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+ }
+  #board div::before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 20px;
+      background-color: #3E2723;
+      bottom: 20px;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: holeGlow 4s ease-in-out infinite;
+ }
+  #board div img {
+      width: 100px;
+      height: 100px;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      z-index: 10;
+ }
+  h1, h2 {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
