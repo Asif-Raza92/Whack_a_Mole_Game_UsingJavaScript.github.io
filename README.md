@@ -1,6 +1,8 @@
 # Whack_a_Mole_Game_UsingJavaScript.github.io
  ENJOY THE GAME AND SUPPORT ME GUYS
 
+Disclaimer : This project is made with the help of Tutorial and I add some features and changed its User interface also take help of Ai to solve only error in projects.
+
  welcome to whack-a-mole a fun and intreactive arcade-style game inspired bt the classic Whack-a-Mole concept. including iconic visuals.
 FEATURES
 Dynamic Gameplay: Moles pop up randomly for you to whack!
